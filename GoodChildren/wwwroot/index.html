@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img  src="./img/logo.png" class="header__logo"/>
+            <div class="header__nav d-flex justify-between">
+                <a href="#" class="header__nav-item active">Главная</a>
+                <a href="#" class="header__nav-item">Мероприятия</a>
+                <a href="#" class="header__nav-item">Пожелания</a>
+                <a href="#" class="header__nav-item">Наставничество</a>
+                <a href="#" class="header__nav-item">Блог</a>
+            </div>
+            <div class="header__user d-flex">
+                <div class="header__user-name">Иван И.</div>
+                <img src="./img/user-img.png" class="header__user-img"/>
+            </div>
+        </div>
+        <div class="content">
+            <h1 class="content__title">Профессия дня</h1>
+            <div class="d-flex justify-between">
+                <div class="content__left">
+                    <img src="./img/home-preview.jpg" class="content__left-preview"/>
+                </div>
+                <div class="content__right">
+                    <div class="content__right-top">
+                        <div class="content__right-title">Web-разработчик</div>
+                        <div class="content__right-paragraf">
+                            Это особый специалист в IT-области, занимающийся созданием сайтов, 
+                            различных сервисов. Это разработчик веб и мультимедийных приложений. 
+                            Он прописывает исходный код продукта, воплощает в жизнь макет, созданный дизайнером.
+                            Именно таким будет стандартное описание профессии, но тут есть деление на три направления:
+                            Frontend - занимается разработкой видимой части сайта;
+                            Backend - занимается разработкой частью которая отвечает за логику сайта;
+                            Fullstack - владеет двумя выше перечисленными направлениями.
+                        </div>
+                    </div>
+                    <div class="content__right-bott d-flex">
+                        <button class="content__right-button"><span>Смотреть</span> <img src="./img/vuesax-linear-play.png" class="vuesax-linear-play" alt=""></button>
+                        <button class="content__right-favorites"></button>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div class="content__videoBlock">
+            <!-- <div  class="content__videoplayer">
+                <embed src="http://www.youtube.com/v/CsqbPIXX_oY?version=3&amp;hl=en_US&amp;rel=0&amp;autohide=1&amp;autoplay=1" wmode="transparent" type="application/x-shockwave-flash" width="100%" height="100%" allowfullscreen="true" title="Adobe Flash Player">
+            </div> -->
+            <object class="content__videoplayer">
+                <param name="movie" value="http://www.youtube.com/v//CsqbPIXX_oY?version=3&amp;hl=en_US" />
+                <param name="allowFullScreen" value="true" />
+                <param value="transparent" name="wmode" />
+                <!-- <param name="allowscriptaccess" value="always" /> -->
+                <embed src="http://www.youtube.com/v//CsqbPIXX_oY?version=3&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" class="cssVideo"></embed>
+            </object>
+            <!-- <iframe src="//www.youtube.com/embed/CsqbPIXX_oY?rel=0&amp;wmode=opaque" frameborder="0" allowfullscreen="allowfullscreen" class="content__videoplayer"></iframe> -->
+            <!-- <iframe src="https://www.youtube.com/embed/CsqbPIXX_oY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="content__videoplayer"></iframe> -->
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
