@@ -31,7 +31,13 @@ namespace GoodChildren.Controllers
             if (ModelState.IsValid)
             {
                 User user = await db.Users.FirstOrDefaultAsync(u => u.LoginEmail == model.Email && u.Password == model.Password);
+                Spons userS = await db.Sponsers.FirstOrDefaultAsync(u => u.LoginEmail == model.Email);
                 if (user != null)
+                {
+                    await Authenticate(model.Email); // аутентификация
+
+                    return RedirectToAction("Index", "Home");
+                }else if (userS != null)
                 {
                     await Authenticate(model.Email); // аутентификация
 
@@ -47,11 +53,43 @@ namespace GoodChildren.Controllers
             if (ModelState.IsValid)
             {
                 User user = await db.Users.FirstOrDefaultAsync(u => u.LoginEmail == model.Email);
-                if (user == null)
+                Spons userS = await db.Sponsers.FirstOrDefaultAsync(u => u.LoginEmail == model.Email);
+                if (user == null&&userS==null)
                 {
                     // добавляем пользователя в бд
                     db.Users.Add(new User { LoginEmail = model.Email, Password = model.Password, BirthDate = model.BirthDate, cityChillHouse = model.cityChillHouse, fullName= model.fullName,
-                    PhoneNum= model.PhoneNum, Role=model.Role});
+                    PhoneNum= model.PhoneNum, Role=model.Role, Coins=250});
+                    await db.SaveChangesAsync();
+
+                    await Authenticate(model.Email); // аутентификация
+
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                    ModelState.AddModelError("", "Некорректные логин и(или) пароль");
+            }
+            return View(model);
+        }
+        public async Task<IActionResult> RegisterS(RegisteSmodel model)
+        {
+            if (ModelState.IsValid)
+            {
+                User user = await db.Users.FirstOrDefaultAsync(u => u.LoginEmail == model.Email);
+                Spons userS = await db.Sponsers.FirstOrDefaultAsync(u => u.LoginEmail == model.Email);
+                if (user == null && userS == null)
+                {
+                    // добавляем пользователя в бд
+                    db.Sponsers.Add(new Spons
+                    {
+                        LoginEmail = model.Email,
+                        Password = model.Password,
+                        BirthDate = model.BirthDate,
+                        cityChillHouse = model.cityChillHouse,
+                        fullName = model.fullName,
+                        PhoneNum = model.PhoneNum,
+                        Role = model.Role,
+                        OSebe = model.OSebe
+                    });
                     await db.SaveChangesAsync();
 
                     await Authenticate(model.Email); // аутентификация

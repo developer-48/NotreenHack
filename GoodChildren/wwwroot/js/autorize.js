@@ -49,6 +49,10 @@ registrationBtn.addEventListener("click", () => {
 })
 for (let item of volunteerBtn) {
     item.addEventListener("click", () => {
+        for (let i of volunteerBtn) {            
+            i.classList.remove("active")            
+        }
+        item.classList.add("active");
         volunteerBlock.style.display = "flex";
         volunteerBlock.style.opacity = "1";
         childrenBlock.style.opacity = "0";
@@ -168,11 +172,16 @@ volunteer2Continue.addEventListener("click", () => {
     let error = document.querySelector(".regist-vol2 .error");
     if (login.value != "" && password.value != "" && passwordTwo.value != "") {
         if (password.value == passwordTwo.value) {
-           
+            let volunt = "";
+            for (let i of volunteerBtn) {
+                if (i.classList.contains("active")) volunt = i.innerText;                
+                
+            }
+            console.log(volunt)
             const data = new FormData();
             data.append("Email", login.value);
             data.append("Password", password.value);
-            data.append("Role", "Волонтёр");
+            data.append("Role", volunt);
             data.append("fullName", name.value);
             data.append("BirthDate", date.value);
             data.append("cityChillHouse", city.value);
