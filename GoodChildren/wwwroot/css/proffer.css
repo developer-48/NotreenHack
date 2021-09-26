@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    /* background: #696666; */
+    /* color: #fff; */
+    font-family: 'Montserrat';
+    margin: 0;
+    position: relative;
+}
+
+p, h1, h2, h3{
+    margin: 0;
+    padding: 0;
+}
+
+button, input{
+    outline: none;
+    border: none;
+}
+a, button, input{
+    display: block;
+    text-decoration: none;
+    font-family: montserrat;
+}
+
+
+.container{
+    width: 1640px;
+    margin: auto;
+}
+
+
+.d-flex{
+    display: flex;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.alighn-center{
+    align-items: center;
+}
+
+/* Home */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    padding: 34px 0;
+}
+
+.header__logo{
+    width: 176px;
+    height: 110px;
+}
+
+.header__nav{
+    max-width: 980px;
+    width: 100%;
+    
+}
+.header__nav-item{
+    color: #004cfc80;
+    transition: .3s all;
+    position: relative;
+}
+.header__nav-item:hover{
+    color: #004cfc;
+    font-weight: 700;
+}
+
+
+
+.header__nav-item::after{
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    margin-top: 60px;
+    left: 0;
+    background-color: #004CFC;
+    transition: .3s all;
+}
+
+.header__nav-item.active{
+    color: #004CFC;
+    font-weight: 700;   
+}
+
+.header__nav-item:hover .header__nav-item::after{
+    width: 100%;   
+}
+.header__nav-item.active::after{
+    width: 100%;   
+}
+
+.header__user{
+    align-items: center;
+    color: #004CFC;
+    font-weight: 600;
+}
+.header__user-name{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.header__user-img{
+    width: 60px;
+    height: 60px;
+    margin-left: 30px;    
+}
+
+.coin {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-family: "Euclid Circular A";
+    font-weight: 700;
+    font-size: 21px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 0px 0px 15px 0px #9e9e9e71;
+            box-shadow: 0px 0px 15px 0px #9e9e9e71;
+    border-radius: 8px;
+    color: #4a61f4;
+    background-color: #fff;
+    width: 104px;
+    height: 42px;
+    cursor: pointer;
+  }
+  
+  .coin__img {
+    width: 30.97px;
+    height: 28.51px;
+  }
+
+
+.proffer-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    padding-top: 70px;
+    position: relative;
+}
+.proffer{
+    padding: 24px;
+    border-radius: 24px;
+    box-shadow: 0 0 10px #616e9191;
+    max-width: 635px;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 30px;
+    position: relative;
+
+}
+.proffer-arrow{
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+}
+.proffer__title{
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.proffer__subtitle{
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 12px;
+    color: #616E91;
+}
+
+.proffer__orphanage, .proffer__city{
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.proffer__orphanage img, .proffer__city img{
+    margin-right: 8px;
+}
+
+.proffer__buttons-contact{
+    padding: 12.5px 18.5px;
+    background-color: #F1367D;
+    border: 2px solid #F1367D;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: .3s all;
+    margin-right: 16px;
+}
+
+.proffer__buttons-contact:hover{
+    transform: scale(1.07);
+    background-color: #fff;
+    color: #F1367D;
+    
+    
+}
+
+.proffer__buttons-details{
+    padding: 12.5px 18.5px;
+    background-color: #fff;
+    border: 2px solid #4A5A82;
+    color: #4A5A82;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: .3s all;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.proffer__buttons-details:hover{
+    transform: scale(1.07);
+    background-color: #4A5A82;
+    color: #fff;
+}
+.proffer__buttons-username{
+    font-weight: 600;
+}
+.proffer__buttons-username img{
+    margin-right: 8px;
+}
+
+.proffer__like{
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 2px solid #4A5A82;
+    color: #4A5A82;
+    transition: .3s all;
+    cursor: pointer;
+}
+
+.profile__like-icon{
+    background: url(/img/heart.png);
+    width: 24px;
+    height: 24px;
+    margin-left: 12px;
+    transition: .3s all;
+}
+
+.proffer__like:hover, .proffer__like.active{
+    transform: scale(1.05);
+    border: 2px solid #F1367D;
+    color: #fff;
+    background-color: #F1367D;
+}
+
+.proffer__like:hover .profile__like-icon, .proffer__like.active .profile__like-icon{
+    background: url(/img/vuesax-linear-heart.png);
+}
+
+
+.submenu__add {
+    box-shadow: 0px 0px 15px 0px #9e9e9e71;
+    cursor: pointer;
+    width: 160px;
+    height: 54px;
+    position: absolute;
+    right: 10px;
+    top: -20px;
+    background-color: #fff;
+    border-radius: 12px;
+    font-family: "Euclid Circular A";
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e3163;
+    text-transform: uppercase;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+            transition: .3s all;
+  }
+  
+  .submenu__add:hover {
+    background-color: #f1367d;
+    color: #fff;
+    -webkit-box-shadow: 0 5px 20px rgba(144, 152, 161, 0.6);
+            box-shadow: 0 5px 20px rgba(144, 152, 161, 0.6);
+  }
+
+  .submenu__plus{
+      margin-left: 5px;
+  }

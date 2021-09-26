@@ -1,0 +1,383 @@
+﻿@model int 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/mentoring.css">
+    <title>Добро детям</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="/img/logo.png" class="header__logo" />
+            <div class="header__nav d-flex justify-between">
+                <a href="/Home/Index" class="header__nav-item">Главная</a>
+                <a href="/Home/Events" class="header__nav-item">Мероприятия</a>
+                <a href="/Home/Mentoring" class="header__nav-item active">Наставничество</a>
+                <a href="#" class="header__nav-item">Пожелания</a>
+                <a href="/Home/message?id=2" class="header__nav-item">Чаты</a>
+            </div>
+            <div class="coin">
+                <img src="/img/coin.png" class='coin__img'>
+                <p class="coin__count">@Model</p>
+            </div>
+            <div class="header__user d-flex">
+                <img src="/img/user-img.png" class="header__user-img" />
+            </div>
+        </div>
+    </div>
+    <div class="activity help">
+        <div class="wrap">
+            <div class="form-add_wrap form-help">
+                <div class="form-add__container">
+                    <div class="help-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44.485" height="44.485" viewBox="0 0 44.485 44.485">
+                            <g id="Сгруппировать_57" data-name="Сгруппировать 57" transform="translate(-135.757 -138.757)">
+                                <path id="Vector" d="M0,36,36,0" transform="translate(140 143)" fill="none" stroke="#f1367d" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" />
+                                <path id="Vector-2" data-name="Vector" d="M36,36,0,0" transform="translate(140 143)" fill="none" stroke="#f1367d" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="form-add">
+                        <div class="form-add__right">
+                            <label class="form-add__title" for="form-add__title">
+                                <span>*</span>
+                                Добавьте заголовок
+                            </label>
+                            <input type="text" id="form-add__title" class='form-add__info form-add__title-form'>
+                            <label class="form-add__title" for="form-add__description">
+                                <span>*</span>
+                                Добавьте описание
+                            </label>
+                            <textarea id="form-add__description" class='form-add__info form-add__description-form'></textarea>
+                        </div>
+                        <div class="form-add__footer">
+                            <div>
+                                <label class="form-add__title" for="form-add__theme">
+                                    <span>*</span>
+                                    Добавьте тему наставничества
+                                </label>
+                                <input type="text" id="form-add__theme" class='form-add__info form-add__title-form'>
+                                <input type="submit" value="Добавить" class="form-add__btn">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="help-card_wrap">
+                <div class="activity-card help-card">
+                    <div class="activity__info">
+                        <div class="activity__title">Хочу учить программирование</div>
+                        <div class="activity__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta corrupti numquam eum minima voluptatem ullam ipsam dolore? Optio blanditiis asperiores cum velit esse, illo ab eum sint beatae molestiae debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quibusdam repellendus rerum commodi minus iure, odio fugit beatae saepe dolorum nesciunt ea sed amet quia sit cupiditate doloribus, neque accusantium in unde voluptatem? Adipisci saepe nam nobis repellat odio, eum esse dolore magni voluptas? Placeat doloremque quos temporibus dolore ipsa?Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellat voluptate similique quod soluta repudiandae incidunt architecto cupiditate explicabo voluptatem. Magni magnam labore provident perferendis fugiat minus, soluta accusantium similique pariatur repellendus! Officiis ipsa facere pariatur asperiores ratione, ea libero recusandae accusamus deserunt cum commodi nihil aliquid. Eligendi voluptate doloremque quod ipsa ad repellendus, soluta saepe impedit? Ea porro eveniet aut dolore. Maxime impedit totam provident inventore aliquam alias quaerat quidem rem labore voluptates voluptatem nobis reiciendis quo placeat mollitia ea eligendi nesciunt enim non corrupti fugit facere, quisquam similique porro. Minus non voluptates corrupti eos consequatur quas quo officiis. </div>
+
+                        <div class="activity__city help-card__categories">
+
+                            <div>
+                                <div class="activity__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="vuesax_linear_search-normal" data-name="vuesax/linear/search-normal" transform="translate(-108 -188)">
+                                            <g id="search-normal">
+                                                <path id="Vector" d="M18,9A9,9,0,1,1,9,0,9,9,0,0,1,18,9Z" transform="translate(110 190)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <path id="Vector-2" data-name="Vector" d="M.1,1.97c.53,1.6,1.74,1.76,2.67.36C3.62,1.05,3.06,0,1.52,0A1.406,1.406,0,0,0,.1,1.97Z" transform="translate(126.83 206.72)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <path id="Vector-3" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(108 188)" fill="none" opacity="0" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <p>Тема: </p>
+                                <div class="activity__data">Программирование</div>
+                            </div>
+                            <div>
+                                <div class="activity__icon">
+                                    <svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24" width="22" height="24">
+                                        <path id="Vector" class="shp0" d="M14.12 10.31C14.12 12.03 12.72 13.43 11 13.43C9.28 13.43 7.88 12.03 7.88 10.31C7.88 8.59 9.28 7.19 11 7.19C12.72 7.19 14.12 8.59 14.12 10.31ZM2.62 8.49C4.59 -0.17 17.42 -0.16 19.38 8.5C20.53 13.58 17.37 17.88 14.6 20.54C12.59 22.48 9.41 22.48 7.39 20.54C4.63 17.88 1.47 13.57 2.62 8.49Z" />
+                                    </svg>
+                                </div>
+                                <p>Город: </p>
+                                <div class="activity__data">Москва</div>
+                            </div>
+                            <div>
+                                <div class="activity__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="vuesax_linear_profile-2user" data-name="vuesax/linear/profile-2user" transform="translate(-172 -252)">
+                                            <g id="vuesax_linear_home-2" data-name="vuesax/linear/home-2" transform="translate(-448 64)">
+                                                <g id="home-2">
+                                                    <path id="Vector" d="M7.37.656,1.63,5.023A4.759,4.759,0,0,0,0,8.343v7.41a4.225,4.225,0,0,0,4.21,4.22H15.79A4.223,4.223,0,0,0,20,15.763V8.483a4.723,4.723,0,0,0-1.8-3.45L12.37.536A4.487,4.487,0,0,0,7.37.656Z" transform="translate(622 190.017)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                    <path id="Vector-2" data-name="Vector" d="M0,4.393V0" transform="translate(632 206) rotate(180)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                    <path id="Vector-3" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(620 188)" fill="none" opacity="0" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+
+                                </div>
+                                <p>Дом: </p>
+                                <div class="activity__data">Центр помощи детям №4</div>
+                            </div>
+
+                        </div>
+                        <div class="activity__footer">
+                            <div class="activity__buttons">
+                                <button class="respond">Cвязаться</button>
+                                <div href='#' class='more' onclick="onMore(e)">Подробнее</div>
+                            </div>
+                            <div class="author">
+                                <div class="author__image">
+                                    <svg id="vuesax_linear_profile-circle" data-name="vuesax/linear/profile-circle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="profile-circle">
+                                            <path id="Vector" d="M3.4,6.55a.963.963,0,0,0-.24,0,3.28,3.28,0,1,1,.24,0Z" transform="translate(8.72 6.23)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            <path id="Vector-2" data-name="Vector" d="M13.48,3.945a9.934,9.934,0,0,1-6.74,2.62A9.934,9.934,0,0,1,0,3.945a3.679,3.679,0,0,1,1.77-2.58,9.73,9.73,0,0,1,9.94,0A3.679,3.679,0,0,1,13.48,3.945Z" transform="translate(5.26 15.435)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            <path id="Vector-3" data-name="Vector" d="M20,10A10,10,0,1,1,10,0,10,10,0,0,1,20,10Z" transform="translate(2 2)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(24 24) rotate(180)" fill="none" opacity="0" />
+                                        </g>
+                                    </svg>
+
+                                </div>
+                                <div class="author__name help-card__name">Иван Иванов</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-card help-card">
+                    <div class="activity__info">
+                        <div class="activity__title">Хочу учить программирование</div>
+                        <div class="activity__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta corrupti numquam eum minima voluptatem ullam ipsam dolore? Optio blanditiis asperiores cum velit esse, illo ab eum sint beatae molestiae debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quibusdam repellendus rerum commodi minus iure, odio fugit beatae saepe dolorum nesciunt ea sed amet quia sit cupiditate doloribus, neque accusantium in unde voluptatem? Adipisci saepe nam nobis repellat odio, eum esse dolore magni voluptas? Placeat doloremque quos temporibus dolore ipsa?Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellat voluptate similique quod soluta repudiandae incidunt architecto cupiditate explicabo voluptatem. Magni magnam labore provident perferendis fugiat minus, soluta accusantium similique pariatur repellendus! Officiis ipsa facere pariatur asperiores ratione, ea libero recusandae accusamus deserunt cum commodi nihil aliquid. Eligendi voluptate doloremque quod ipsa ad repellendus, soluta saepe impedit? Ea porro eveniet aut dolore. Maxime impedit totam provident inventore aliquam alias quaerat quidem rem labore voluptates voluptatem nobis reiciendis quo placeat mollitia ea eligendi nesciunt enim non corrupti fugit facere, quisquam similique porro. Minus non voluptates corrupti eos consequatur quas quo officiis. </div>
+
+                        <div class="activity__city help-card__categories">
+
+                            <div>
+                                <div class="activity__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="vuesax_linear_search-normal" data-name="vuesax/linear/search-normal" transform="translate(-108 -188)">
+                                            <g id="search-normal">
+                                                <path id="Vector" d="M18,9A9,9,0,1,1,9,0,9,9,0,0,1,18,9Z" transform="translate(110 190)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <path id="Vector-2" data-name="Vector" d="M.1,1.97c.53,1.6,1.74,1.76,2.67.36C3.62,1.05,3.06,0,1.52,0A1.406,1.406,0,0,0,.1,1.97Z" transform="translate(126.83 206.72)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <path id="Vector-3" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(108 188)" fill="none" opacity="0" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <p>Тема: </p>
+                                <div class="activity__data">Программирование</div>
+                            </div>
+                            <div>
+                                <div class="activity__icon">
+                                    <svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24" width="22" height="24">
+                                        <path id="Vector" class="shp0" d="M14.12 10.31C14.12 12.03 12.72 13.43 11 13.43C9.28 13.43 7.88 12.03 7.88 10.31C7.88 8.59 9.28 7.19 11 7.19C12.72 7.19 14.12 8.59 14.12 10.31ZM2.62 8.49C4.59 -0.17 17.42 -0.16 19.38 8.5C20.53 13.58 17.37 17.88 14.6 20.54C12.59 22.48 9.41 22.48 7.39 20.54C4.63 17.88 1.47 13.57 2.62 8.49Z" />
+                                    </svg>
+                                </div>
+                                <p>Город: </p>
+                                <div class="activity__data">Москва</div>
+                            </div>
+                            <div>
+                                <div class="activity__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="vuesax_linear_profile-2user" data-name="vuesax/linear/profile-2user" transform="translate(-172 -252)">
+                                            <g id="vuesax_linear_home-2" data-name="vuesax/linear/home-2" transform="translate(-448 64)">
+                                                <g id="home-2">
+                                                    <path id="Vector" d="M7.37.656,1.63,5.023A4.759,4.759,0,0,0,0,8.343v7.41a4.225,4.225,0,0,0,4.21,4.22H15.79A4.223,4.223,0,0,0,20,15.763V8.483a4.723,4.723,0,0,0-1.8-3.45L12.37.536A4.487,4.487,0,0,0,7.37.656Z" transform="translate(622 190.017)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                    <path id="Vector-2" data-name="Vector" d="M0,4.393V0" transform="translate(632 206) rotate(180)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                    <path id="Vector-3" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(620 188)" fill="none" opacity="0" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+
+                                </div>
+                                <p>Дом: </p>
+                                <div class="activity__data">Центр помощи детям №4</div>
+                            </div>
+
+                        </div>
+                        <div class="activity__footer">
+                            <div class="activity__buttons">
+                                <button class="respond">Cвязаться</button>
+                                <div href='#' class='more'>Подробнее</div>
+                            </div>
+                            <div class="author">
+                                <div class="author__image">
+                                    <svg id="vuesax_linear_profile-circle" data-name="vuesax/linear/profile-circle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="profile-circle">
+                                            <path id="Vector" d="M3.4,6.55a.963.963,0,0,0-.24,0,3.28,3.28,0,1,1,.24,0Z" transform="translate(8.72 6.23)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            <path id="Vector-2" data-name="Vector" d="M13.48,3.945a9.934,9.934,0,0,1-6.74,2.62A9.934,9.934,0,0,1,0,3.945a3.679,3.679,0,0,1,1.77-2.58,9.73,9.73,0,0,1,9.94,0A3.679,3.679,0,0,1,13.48,3.945Z" transform="translate(5.26 15.435)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            <path id="Vector-3" data-name="Vector" d="M20,10A10,10,0,1,1,10,0,10,10,0,0,1,20,10Z" transform="translate(2 2)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(24 24) rotate(180)" fill="none" opacity="0" />
+                                        </g>
+                                    </svg>
+
+                                </div>
+                                <div class="author__name help-card__name">Иван Иванов</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-card help-card">
+                    <div class="activity__info">
+                        <div class="activity__title">Хочу учить программирование</div>
+                        <div class="activity__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta corrupti numquam eum minima voluptatem ullam ipsam dolore? Optio blanditiis asperiores cum velit esse, illo ab eum sint beatae molestiae debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quibusdam repellendus rerum commodi minus iure, odio fugit beatae saepe dolorum nesciunt ea sed amet quia sit cupiditate doloribus, neque accusantium in unde voluptatem? Adipisci saepe nam nobis repellat odio, eum esse dolore magni voluptas? Placeat doloremque quos temporibus dolore ipsa?Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellat voluptate similique quod soluta repudiandae incidunt architecto cupiditate explicabo voluptatem. Magni magnam labore provident perferendis fugiat minus, soluta accusantium similique pariatur repellendus! Officiis ipsa facere pariatur asperiores ratione, ea libero recusandae accusamus deserunt cum commodi nihil aliquid. Eligendi voluptate doloremque quod ipsa ad repellendus, soluta saepe impedit? Ea porro eveniet aut dolore. Maxime impedit totam provident inventore aliquam alias quaerat quidem rem labore voluptates voluptatem nobis reiciendis quo placeat mollitia ea eligendi nesciunt enim non corrupti fugit facere, quisquam similique porro. Minus non voluptates corrupti eos consequatur quas quo officiis. </div>
+
+                        <div class="activity__city help-card__categories">
+
+                            <div>
+                                <div class="activity__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="vuesax_linear_search-normal" data-name="vuesax/linear/search-normal" transform="translate(-108 -188)">
+                                            <g id="search-normal">
+                                                <path id="Vector" d="M18,9A9,9,0,1,1,9,0,9,9,0,0,1,18,9Z" transform="translate(110 190)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <path id="Vector-2" data-name="Vector" d="M.1,1.97c.53,1.6,1.74,1.76,2.67.36C3.62,1.05,3.06,0,1.52,0A1.406,1.406,0,0,0,.1,1.97Z" transform="translate(126.83 206.72)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <path id="Vector-3" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(108 188)" fill="none" opacity="0" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <p>Тема: </p>
+                                <div class="activity__data">Программирование</div>
+                            </div>
+                            <div>
+                                <div class="activity__icon">
+                                    <svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24" width="22" height="24">
+                                        <path id="Vector" class="shp0" d="M14.12 10.31C14.12 12.03 12.72 13.43 11 13.43C9.28 13.43 7.88 12.03 7.88 10.31C7.88 8.59 9.28 7.19 11 7.19C12.72 7.19 14.12 8.59 14.12 10.31ZM2.62 8.49C4.59 -0.17 17.42 -0.16 19.38 8.5C20.53 13.58 17.37 17.88 14.6 20.54C12.59 22.48 9.41 22.48 7.39 20.54C4.63 17.88 1.47 13.57 2.62 8.49Z" />
+                                    </svg>
+                                </div>
+                                <p>Город: </p>
+                                <div class="activity__data">Москва</div>
+                            </div>
+                            <div>
+                                <div class="activity__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="vuesax_linear_profile-2user" data-name="vuesax/linear/profile-2user" transform="translate(-172 -252)">
+                                            <g id="vuesax_linear_home-2" data-name="vuesax/linear/home-2" transform="translate(-448 64)">
+                                                <g id="home-2">
+                                                    <path id="Vector" d="M7.37.656,1.63,5.023A4.759,4.759,0,0,0,0,8.343v7.41a4.225,4.225,0,0,0,4.21,4.22H15.79A4.223,4.223,0,0,0,20,15.763V8.483a4.723,4.723,0,0,0-1.8-3.45L12.37.536A4.487,4.487,0,0,0,7.37.656Z" transform="translate(622 190.017)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                    <path id="Vector-2" data-name="Vector" d="M0,4.393V0" transform="translate(632 206) rotate(180)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                    <path id="Vector-3" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(620 188)" fill="none" opacity="0" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+
+                                </div>
+                                <p>Дом: </p>
+                                <div class="activity__data">Центр помощи детям №4</div>
+                            </div>
+
+                        </div>
+                        <div class="activity__footer">
+                            <div class="activity__buttons">
+                                <button class="respond">Cвязаться</button>
+                                <div href='#' class='more'>Подробнее</div>
+                            </div>
+                            <div class="author">
+                                <div class="author__image">
+                                    <svg id="vuesax_linear_profile-circle" data-name="vuesax/linear/profile-circle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="profile-circle">
+                                            <path id="Vector" d="M3.4,6.55a.963.963,0,0,0-.24,0,3.28,3.28,0,1,1,.24,0Z" transform="translate(8.72 6.23)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            <path id="Vector-2" data-name="Vector" d="M13.48,3.945a9.934,9.934,0,0,1-6.74,2.62A9.934,9.934,0,0,1,0,3.945a3.679,3.679,0,0,1,1.77-2.58,9.73,9.73,0,0,1,9.94,0A3.679,3.679,0,0,1,13.48,3.945Z" transform="translate(5.26 15.435)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            <path id="Vector-3" data-name="Vector" d="M20,10A10,10,0,1,1,10,0,10,10,0,0,1,20,10Z" transform="translate(2 2)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(24 24) rotate(180)" fill="none" opacity="0" />
+                                        </g>
+                                    </svg>
+
+                                </div>
+                                <div class="author__name help-card__name">Иван Иванов</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-card help-card">
+                    <div class="activity__info">
+                        <div class="activity__title">Хочу учить программирование</div>
+                        <div class="activity__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta corrupti numquam eum minima voluptatem ullam ipsam dolore? Optio blanditiis asperiores cum velit esse, illo ab eum sint beatae molestiae debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quibusdam repellendus rerum commodi minus iure, odio fugit beatae saepe dolorum nesciunt ea sed amet quia sit cupiditate doloribus, neque accusantium in unde voluptatem? Adipisci saepe nam nobis repellat odio, eum esse dolore magni voluptas? Placeat doloremque quos temporibus dolore ipsa?Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellat voluptate similique quod soluta repudiandae incidunt architecto cupiditate explicabo voluptatem. Magni magnam labore provident perferendis fugiat minus, soluta accusantium similique pariatur repellendus! Officiis ipsa facere pariatur asperiores ratione, ea libero recusandae accusamus deserunt cum commodi nihil aliquid. Eligendi voluptate doloremque quod ipsa ad repellendus, soluta saepe impedit? Ea porro eveniet aut dolore. Maxime impedit totam provident inventore aliquam alias quaerat quidem rem labore voluptates voluptatem nobis reiciendis quo placeat mollitia ea eligendi nesciunt enim non corrupti fugit facere, quisquam similique porro. Minus non voluptates corrupti eos consequatur quas quo officiis. </div>
+
+                        <div class="activity__city help-card__categories">
+
+                            <div>
+                                <div class="activity__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="vuesax_linear_search-normal" data-name="vuesax/linear/search-normal" transform="translate(-108 -188)">
+                                            <g id="search-normal">
+                                                <path id="Vector" d="M18,9A9,9,0,1,1,9,0,9,9,0,0,1,18,9Z" transform="translate(110 190)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <path id="Vector-2" data-name="Vector" d="M.1,1.97c.53,1.6,1.74,1.76,2.67.36C3.62,1.05,3.06,0,1.52,0A1.406,1.406,0,0,0,.1,1.97Z" transform="translate(126.83 206.72)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <path id="Vector-3" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(108 188)" fill="none" opacity="0" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <p>Тема: </p>
+                                <div class="activity__data">Программирование</div>
+                            </div>
+                            <div>
+                                <div class="activity__icon">
+                                    <svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24" width="22" height="24">
+                                        <path id="Vector" class="shp0" d="M14.12 10.31C14.12 12.03 12.72 13.43 11 13.43C9.28 13.43 7.88 12.03 7.88 10.31C7.88 8.59 9.28 7.19 11 7.19C12.72 7.19 14.12 8.59 14.12 10.31ZM2.62 8.49C4.59 -0.17 17.42 -0.16 19.38 8.5C20.53 13.58 17.37 17.88 14.6 20.54C12.59 22.48 9.41 22.48 7.39 20.54C4.63 17.88 1.47 13.57 2.62 8.49Z" />
+                                    </svg>
+                                </div>
+                                <p>Город: </p>
+                                <div class="activity__data">Москва</div>
+                            </div>
+                            <div>
+                                <div class="activity__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="vuesax_linear_profile-2user" data-name="vuesax/linear/profile-2user" transform="translate(-172 -252)">
+                                            <g id="vuesax_linear_home-2" data-name="vuesax/linear/home-2" transform="translate(-448 64)">
+                                                <g id="home-2">
+                                                    <path id="Vector" d="M7.37.656,1.63,5.023A4.759,4.759,0,0,0,0,8.343v7.41a4.225,4.225,0,0,0,4.21,4.22H15.79A4.223,4.223,0,0,0,20,15.763V8.483a4.723,4.723,0,0,0-1.8-3.45L12.37.536A4.487,4.487,0,0,0,7.37.656Z" transform="translate(622 190.017)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                    <path id="Vector-2" data-name="Vector" d="M0,4.393V0" transform="translate(632 206) rotate(180)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                    <path id="Vector-3" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(620 188)" fill="none" opacity="0" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+
+                                </div>
+                                <p>Дом: </p>
+                                <div class="activity__data">Центр помощи детям №4</div>
+                            </div>
+
+                        </div>
+                        <div class="activity__footer">
+                            <div class="activity__buttons">
+                                <button class="respond">Cвязаться</button>
+                                <div href='#' class='more'>Подробнее</div>
+                            </div>
+                            <div class="author">
+                                <div class="author__image">
+                                    <svg id="vuesax_linear_profile-circle" data-name="vuesax/linear/profile-circle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="profile-circle">
+                                            <path id="Vector" d="M3.4,6.55a.963.963,0,0,0-.24,0,3.28,3.28,0,1,1,.24,0Z" transform="translate(8.72 6.23)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            <path id="Vector-2" data-name="Vector" d="M13.48,3.945a9.934,9.934,0,0,1-6.74,2.62A9.934,9.934,0,0,1,0,3.945a3.679,3.679,0,0,1,1.77-2.58,9.73,9.73,0,0,1,9.94,0A3.679,3.679,0,0,1,13.48,3.945Z" transform="translate(5.26 15.435)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            <path id="Vector-3" data-name="Vector" d="M20,10A10,10,0,1,1,10,0,10,10,0,0,1,20,10Z" transform="translate(2 2)" fill="none" stroke="#1e3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(24 24) rotate(180)" fill="none" opacity="0" />
+                                        </g>
+                                    </svg>
+
+                                </div>
+                                <div class="author__name help-card__name">Иван Иванов</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="help-btn">
+                Добавить
+                <span class="submenu__plus">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22.141" height="22.141" viewBox="0 0 22.141 22.141">
+                        <g id="vuesax_linear_add" data-name="vuesax/linear/add" transform="translate(0 0)">
+                            <g id="add" transform="translate(0 0)">
+                                <path id="Vector" d="M0,0H11.071" transform="translate(5.535 11.071)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                                <path id="Vector-2" data-name="Vector" d="M0,11.071V0" transform="translate(11.071 5.535)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                                <path id="Vector-3" data-name="Vector" d="M0,0H22.141V22.141H0Z" fill="none" opacity="0" />
+                            </g>
+                        </g>
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </div>
+    <script src="/js/mentoring.js"></script>
+</body>
+</html>
+    }
+}

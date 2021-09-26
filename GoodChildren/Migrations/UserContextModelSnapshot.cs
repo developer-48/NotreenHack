@@ -92,11 +92,23 @@ namespace GoodChildren.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Opisanie")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Photo")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Spons")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("State")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Vladelec")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("VladelecId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Volonts")
                         .HasColumnType("nvarchar(max)");
@@ -106,6 +118,9 @@ namespace GoodChildren.Migrations
 
                     b.Property<int>("Zanyata")
                         .HasColumnType("int");
+
+                    b.Property<bool>("Zayavki")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 

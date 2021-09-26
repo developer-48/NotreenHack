@@ -1,13 +1,17 @@
 ﻿using GoodChildren.Models;
 using GoodChildren.ViewModels;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
+
 using System.Threading.Tasks;
 
 namespace GoodChildren.Controllers
@@ -16,9 +20,10 @@ namespace GoodChildren.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private UserContext db;
-
-        public HomeController(ILogger<HomeController> logger, UserContext context)
+        private readonly IHostingEnvironment hostingEnvironment;
+        public HomeController(ILogger<HomeController> logger, UserContext context, IHostingEnvironment environment )
         {
+            hostingEnvironment = environment;
             _logger = logger;
             db = context;
         }
@@ -26,11 +31,61 @@ namespace GoodChildren.Controllers
         [Authorize]
         public IActionResult Index()
         {
+            User Im = db.Users.FirstOrDefault(u => u.LoginEmail == User.Identity.Name);
+            int Coins = Im.Coins;
+            ViewBag.Coins = Coins;
             List<User> Test = db.Users.ToList();
             List<UserView> Model = new List<UserView>();
             for (int i = 0; i < Test.Count; i++)
                 Model.Add(new UserView() { Id = Test[i].Id, Email = Test[i].LoginEmail });
             return View(Model);
+        }
+        public IActionResult Events()
+        {
+            List<Sobytiya> model = db.Events.ToList();
+            User Im = db.Users.FirstOrDefault(u => u.LoginEmail == User.Identity.Name);
+            ViewBag.Coins = Im.Coins;
+            return View(model);
+        }
+        public IActionResult Proffer()
+        {
+            User Im = db.Users.FirstOrDefault(u => u.LoginEmail == User.Identity.Name);
+            int Coins = Im.Coins;
+            return View(Coins);
+        }
+        public IActionResult Mentoring()
+        {
+            User Im = db.Users.FirstOrDefault(u => u.LoginEmail == User.Identity.Name);
+            int Coins = Im.Coins;
+            return View(Coins);
+        }
+        [HttpPost]
+        public async void AddEvents(SobytiyaFile model)
+        {
+            long size = model.files.Sum(f => f.Length);
+
+            // full path to file in temp location
+            var filePath = Path.GetTempFileName();
+
+            foreach (var formFile in model.files)
+            {
+                var uploads = Path.Combine(hostingEnvironment.WebRootPath, "images");
+                var fullPath = Path.Combine(uploads, GetUniqueFileName(formFile.FileName));
+                formFile.CopyTo(new FileStream(fullPath, FileMode.Create));
+
+            }
+
+
+            //db.Events.Add(model);
+            await db.SaveChangesAsync();
+        }
+        private string GetUniqueFileName(string fileName)
+        {
+            fileName = Path.GetFileName(fileName);
+            return Path.GetFileNameWithoutExtension(fileName)
+                      + "_"
+                      + Guid.NewGuid().ToString().Substring(0, 4)
+                      + Path.GetExtension(fileName);
         }
         public IActionResult message(int? id)
         {
@@ -82,11 +137,12 @@ namespace GoodChildren.Controllers
             else return null;
         }
         [HttpPost]
-        public async void LookMesseng(LookMeseng model, UserContext db)
+        public void LookMesseng(LookMeseng model)
         {
             ChatState test = db.ChatStates.FirstOrDefault(u => u.UserId == model.UserId && u.ChatId == model.ChatId);
             test.State = model.State;
-            await db.SaveChangesAsync();
+            db.ChatStates.Update(test);
+            db.SaveChanges();
         }
         [HttpPost]
         public async void Coins(CoinsesModel model)

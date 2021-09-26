@@ -11,17 +11,20 @@
 <body>
     <div class="container">
         <div class="header">
-            <img src="~/img/logo.png" class="header__logo" />
+            <img src="/img/logo.png" class="header__logo" />
             <div class="header__nav d-flex justify-between">
-                <a href="#" class="header__nav-item active">Главная</a>
-                <a href="#" class="header__nav-item">Мероприятия</a>
+                <a href="/Home/Index" class="header__nav-item active">Главная</a>
+                <a href="/Home/Events" class="header__nav-item">Мероприятия</a>
+                <a href="/Home/Mentoring" class="header__nav-item">Наставничество</a>
                 <a href="#" class="header__nav-item">Пожелания</a>
-                <a href="#" class="header__nav-item">Наставничество</a>
-                <a href="#" class="header__nav-item">Блог</a>
+                <a href="/Home/message?id=2" class="header__nav-item">Чаты</a>
+            </div>
+            <div class="coin">
+                <img src="/img/coin.png" class='coin__img'>
+                <p class="coin__count">@ViewBag.Coins</p>
             </div>
             <div class="header__user d-flex">
-                <div class="header__user-name">Иван И.</div>
-                <img src="~/img/user-img.png" class="header__user-img" />
+                <img src="/img/user-img.png" class="header__user-img" />
             </div>
         </div>
         <div class="content">
